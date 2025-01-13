@@ -17,7 +17,8 @@ console.log('resize: ', process.env.RESIZE);
 console.log('is multi arch? only for Mac: ', process.env.MULTI_ARCH);
 console.log('targets type? only for Linux: ', process.env.TARGETS);
 console.log('safe-domain: ', process.env.SAFE_DOMAIN);
-console.log('debug: ', process.env.DEBUG);
+// console.log('debug: ', process.env.DEBUG);
+console.log('installer language: ', process.env.INSTALLER_LANGUAGE);
 console.log('===========================\n');
 
 cd('node_modules/pake-cli');
@@ -53,8 +54,12 @@ if (process.platform === 'win32' || process.platform === 'linux') {
   params = `${params} --show-system-tray`;
 }
 
-if (process.env.DEBUG === 'true') {
-  params = `${params} --debug`;
+// if (process.env.DEBUG === 'true') {
+//   params = `${params} --debug`;
+// }
+
+if (process.env.INSTALLER_LANGUAGE) {
+  params = `${params} --installer-language ${process.env.INSTALLER_LANGUAGE}`;
 }
 
 const downloadIcon = async iconFile => {
