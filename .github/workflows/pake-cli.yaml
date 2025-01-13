@@ -17,6 +17,10 @@ on:
       name:
         description: '[Name]'
         required: true
+      installer_language:
+        description: '[Installer Language, Optional]'
+        required: false
+        default: 'en-US'
       icon:
         description: '[Icon, Optional]'
         required: false
