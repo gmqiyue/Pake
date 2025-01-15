@@ -5,7 +5,7 @@ on:
       platform:
         description: 'platform'
         required: true
-        default: 'macos-latest'
+        default: 'windows-latest'
         type: choice
         options:
           - 'windows-latest'
@@ -20,7 +20,7 @@ on:
       installer_language:
         description: '[Installer Language, Optional]'
         required: false
-        default: 'en-US'
+        default: 'zh-CN'
       icon:
         description: '[Icon, Optional]'
         required: false

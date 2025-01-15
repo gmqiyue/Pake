@@ -5,7 +5,11 @@ import chalk from 'chalk';
 
 // Generates an identifier based on the given URL.
 export function getIdentifier(url: string) {
-  const postFixHash = crypto.createHash('md5').update(url).digest('hex').substring(0, 6);
+  const postFixHash = crypto
+    .createHash('md5')
+    .update(url + Date.now()) // 添加时间戳
+    .digest('hex')
+    .substring(0, 6);
   return `com.pake.${postFixHash}`;
 }
 
