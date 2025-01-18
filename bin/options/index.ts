@@ -54,5 +54,6 @@ export default async function handleOptions(options: PakeCliOptions, url: string
 
   appOptions.icon = await handleIcon(appOptions);
 
+  console.log('appOptions: ', appOptions);
   return appOptions;
 }
