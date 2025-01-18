@@ -137,7 +137,7 @@ jobs:
           MULTI_ARCH: ${{ inputs.multi_arch }}
           TARGETS: ${{ inputs.targets }}
           SAFE_DOMAIN: ${{ inputs.safe_domain }}
-          # DEBUG: ${{ inputs.debug }}
+          DEBUG: ${{ inputs.debug }}
           INSTALLER_LANGUAGE: ${{ inputs.installer_language }}
       - name: Upload archive
         uses: actions/upload-artifact@v3
